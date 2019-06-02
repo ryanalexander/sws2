@@ -2,6 +2,7 @@
   "build": "sws / 2.0",
   "cline" : true,
   "host_resolution":true,
+  "admin_pass":'1234',
   "errors":{
     "site_not_configured":true
   },

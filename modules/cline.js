@@ -12,6 +12,7 @@
  
 var net = require('net');
 var logger = require("./logger.js");
+let conf = JSON.parse(fs.readFileSync("./config.yml"));
 var fs = require("fs");
 var colors = {
     "red":"\u001b[31m",
@@ -72,7 +73,7 @@ exports.start = function(http,https) {
 function handleCMD (args,socket,http,https){
     switch (args[0].toLowerCase().replace("\r\n","")){
         case "pass":
-            if(args[1]==="Garcia#02")
+            if(args[1]===conf['admin_pass'])
             {socket.write(colors.cyan+"OK\r\n"+colors.reset);socket.auth=true;}
             else
             {socket.write(colors.red+"FAIL\r\n"+colors.reset);socket.auth=false;socket.close();}

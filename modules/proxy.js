@@ -46,6 +46,13 @@ exports.start = function(logger,hostcache) {
                         host.on('close', ()=>{client.end(()=>{host.destroy()});});
                     }
                 }
+                setTimeout(()=>{
+                    if(!host){
+                        client.end(()=>{
+                            client.destroy();
+                        });
+                    }
+                },10000);
             }else {
                 try {
                     host.write(e);

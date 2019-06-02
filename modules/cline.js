@@ -27,7 +27,7 @@ var colors = {
 var sockets = [];
 var authorised = [];
 var loggers = [];
-var port = 25471;
+var port = 4010;
 
 exports.log = function (msg){
     for(i=0;i<loggers.length;i++){

@@ -18,7 +18,7 @@ const logger = require("./modules/logger.js");
 const fs = require("fs");
 const config = JSON.parse(fs.readFileSync("config.yml").toString());
 
-let highestport = 4015;
+let highestport = 4011;
 let portmap = {};
 
 if(!!config['cline']){cline.start(http,https);}

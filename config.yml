@@ -1,0 +1,21 @@
+{
+  "build": "sws / 2.0",
+  "cline" : true,
+  "host_resolution":true,
+  "errors":{
+    "site_not_configured":true
+  },
+    "sites": {
+      "default": {
+        "dir": "sites/default",
+        "default_file": "index.html",
+        "enforce_ssl": false,
+        "SSL": {
+          "enabled": false
+        },
+        "aliases": {}
+      }
+    },
+    "blackList": [],
+    "warnings":[]
+}
